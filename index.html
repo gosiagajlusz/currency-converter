@@ -20,20 +20,26 @@
 </head>
 
 <body>
-    <form class="js-form">
+    <form class="js-form" action="https://postman-echo.com/get">
         <p>
-            Sprawdź ile to zł
+
+        <fieldset>
+            <legend>Sprawdź ile to zł</legend>
             <label>
-                Kwota w Euro <input name="euro">
+                Kwota w Euro <input name="euro" class="euro" type="number" step="0.01" min="1" required>
             </label>
             <label>
                 Aktualny kurs
-                <input name="rate">
+                <input name="rate" class="rate" type="number" step="0.01" min="1" required>
             </label>
-        </p>
-        <p>
-            <button class="js-recalculate">Przelicz!</button>
-        </p>
+            </p>
+            <p>
+                <button type="submit" class="js-recalculate">Przelicz!</button>
+            </p>
+            <p>
+                Kwota w złotówkach: <strong class="js-valueInPln">N/A</strong>
+            </p>
+        </fieldset>
     </form>
 
 
