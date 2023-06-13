@@ -5,12 +5,12 @@ let valueInPlnElement = document.querySelector(".js-valueInPln");
 let rate = 4.48
 
 formElement.addEventListener("submit", (event) => {
-event.preventDefault();
+    event.preventDefault();
 
-let euro = euroInput.value;
-//let rate = rateInput.value;
-let value = (euro*rate);
-valueInPlnElement.innerText = value.toFixed(3);
+    let euro = euroInput.value;
+
+    let value = (euro * rate);
+    valueInPlnElement.innerText = value.toFixed(3);
 });
 
 
