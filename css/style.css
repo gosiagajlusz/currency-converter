@@ -2,10 +2,12 @@ html {
     box-sizing: border-box;
 }
 
-*, ::after, ::before {
+*,
+::after,
+::before {
     box-sizing: inherit;
 }
 
 body {
-    font-family: "Poppins",sans-serif;
+    font-family: "Poppins", sans-serif;
 }

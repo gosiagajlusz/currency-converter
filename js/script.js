@@ -1,6 +1,5 @@
-let euroInput = document.querySelector(".euro");
-let rateInput = document.querySelector(".rate");
-let formElement = document.querySelector(".js-form");
+let euroInput = document.querySelector(".form__euro");
+let formElement = document.querySelector(".form");
 let valueInPlnElement = document.querySelector(".js-valueInPln");
 let rate = 4.48
 
