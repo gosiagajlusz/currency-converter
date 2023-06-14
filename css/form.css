@@ -1,10 +1,10 @@
 .form__labelText {
     display: inline-block;
-    margin: 7px;
+    margin: 5px;
     color: #113850;
     font-weight: bold;
     width: 100%;
-    max-width: 150px;
+    max-width: 300px;
 }
 
 
@@ -15,6 +15,15 @@
 
 .form__euro {
     border: 2px solid #a9dfb2;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 300px;
+    padding: 8px;
+    margin: 5px;
+}
+
+.form__rate {
+    border: 2px solid #c3c4c3;
     border-radius: 4px;
     width: 100%;
     max-width: 300px;
