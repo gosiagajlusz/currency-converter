@@ -1,70 +1,45 @@
 let moneyInput = document.querySelector(".form__money");
+let currencyElement = document.querySelector(".js-currency");
 let formElement = document.querySelector(".form");
 let valueInPlnElement = document.querySelector(".js-valueInPln");
 let rateInput = document.querySelector(".form__rate");
+//currencyElement
 
-//switch do poprawienia układ
-switch(different rate for every currency) {
-    case 1:
-      if form__currencyType value=euro {
-          let rate=4.48
-      }
-      break;
-    case 2:
-      if form__currencyType value=dolar {
-          let rate=4.08
-      }
-      break;
-      case 3:
-      if form__currencyType value=frank szwajcarski {
-          let rate=4.57
-      }
-      break;
-    default:
-      {
-          let rate=4.48
-      }
-  }
+let euroRate = 4.48
+let dolarRate = 4.08
+let frankSzwajcarskiRate = 4.57
 
-//switch do poprawienia 
+
+
+
+switch (currency) {
+  case "EUR":
+    valueInPlnElement = moneyInput / euroRate;
+      break;
+
+  case "dolar":
+    valueInPlnElement = moneyInput / dolarRate;
+      break;
+
+  case "frankSzwajcarski":
+    valueInPlnElement = moneyInput / frankSzwajcarskiRate;
+      break;
+}
+
+
+
 
 
 formElement.addEventListener("submit", (event) => {
-    event.preventDefault();
+  event.preventDefault();
 
-    let money = moneyInput.value;
-    let rate = rateInput.value;
+  let money = moneyInput.value;
+  let rate = rateInput.value;
+  //rate powinien sie zmieniac w zaleznosci od tego jaka waluta wybrana -polaczyc switch statement z 
+  //tym mnozeniem tutaj- sprawdzic czy sie zgadzaja wszystkie zlapane elemety w js i czy sa aktualne
+  //wszystkie nazwy i klasy 
 
-    let value = (money * rate);
-    valueInPlnElement.innerText = value.toFixed(2);
+  let value = (money * rate);
+  valueInPlnElement.innerText = value.toFixed(2);
 });
 
-/*
-switch(different rate for every currency) {
-  case 1:
-    if form__currencyType value=euro {
-        let rate=4.48
-    }
-    break;
-  case 2:
-    if form__currencyType value=dolar {
-        let rate=4.08
-    }
-    break;
-    case 3:
-    if form__currencyType value=frank szwajcarski {
-        let rate=4.57
-    }
-    break;
-  default:
-    {
-        let rate=4.48
-    }
-}
-//value=currency*rate
-//
-
-//zmienić miejsce euro na currency. potem if currency=np. euro to rate= cos tam if 
-//<select name="form__currencyType"> value= euro to rate=
-//if 
-*/
