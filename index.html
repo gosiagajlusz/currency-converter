@@ -25,28 +25,22 @@
 
 <body>
     <div class="container">
-        <form class="form" action="https://postman-echo.com/get">
+        <form class="form js-form" action="https://postman-echo.com/get">
 
 
             <fieldset class="form__fieldset">
                 <legend class="form__legend">Sprawdź ile to złotówek</legend>
                 <label>
                     <span class="form__labelText"> Kwota </span>
-                    <input name="money" class="form__money" type="number" step="0.01" min="1" required />
+                    <input name="money" class="form__money js-form__money" type="number" step="0.01" min="1" required />
                 </label>
                 <label>
                     <select class="form__currencyType js-currency" name="currency">
                         <option value="euro">euro</option>
                         <option value="dolar">dolar</option>
                         <option value="frank szwajcarski">frank szwajcarski</option>
-                                            </select>
+                    </select>
                 </label>
-
-                <!--<label>
-                    <span class="form__labelText"> Aktualny kurs </span>
-                     <input class="form__rate" value="4.48" disabled></label>
-                        
-                        #region -->
 
                 <p>
                     <button type="submit" class="form__button">Przelicz!</button>
