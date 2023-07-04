@@ -1,8 +1,4 @@
 # currency-converter
-
-
-
-# currency-converter
 This project is a simple **currency converter** with euro, USD and swiss franc. It's visual site is in green and black colours and a little bit inspired by cartoons. 
 It's looks is suppose to bring associations with vacation. 
 
