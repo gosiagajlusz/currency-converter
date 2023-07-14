@@ -1,38 +1,47 @@
-let moneyInput = document.querySelector(".js-form__money");
 
-let currencySelect = document.querySelector(".js-currency");
 
-let formElement = document.querySelector(".js-form");
+{
+  const calculateResult = (rate, money) => {
+    const euroRate = 4.48;
+    const dolarRate = 4.08;
+    const frankSzwajcarskiRate = 4.57;
 
-let valueInPlnElement = document.querySelector(".js-valueInPln");
+    switch (rate) {
+      case "euro":
+        return money * euroRate;
 
-let money = moneyInput.value;
-let rate = currencySelect.value;
+      case "dolar":
+        return money * dolarRate;
 
-let euroRate = 4.48;
-let dolarRate = 4.08;
-let frankSzwajcarskiRate = 4.57;
+      case "frank szwajcarski":
+        return money * frankSzwajcarskiRate;
 
-formElement.addEventListener("submit", (event) => {
-  event.preventDefault();
-  let money = +moneyInput.value;
-  let rate = currencySelect.value;
-  console.log(money, rate);
-  let result;
-  
-  switch (rate) {
-    case "euro":
-      result = money * euroRate;
-      break;
+    }
+  };
 
-    case "dolar":
-      result = money * dolarRate;
-      break;
-
-    case "frank szwajcarski":
-      result = money * frankSzwajcarskiRate;
-      break;
+  const valueInPlnUpdate = (result) => {
+    const valueInPlnElement = document.querySelector(".js-valueInPln");
+    valueInPlnElement.innerHTML = result.toFixed(2);
   }
-  valueInPlnElement.innerHTML = result.toFixed(2);
-  });
+  const onFormSubmit = (event) => {
+    event.preventDefault();
 
+
+    const moneyInput = document.querySelector(".js-form__money");
+    const currencySelect = document.querySelector(".js-currency");
+
+    const money = +moneyInput.value;
+    const rate = currencySelect.value;
+    let result = calculateResult(rate, money);
+    valueInPlnUpdate(result);
+
+  };
+
+
+  const init = () => {
+    const formElement = document.querySelector(".js-form");
+    formElement.addEventListener("submit", onFormSubmit);
+  };
+  init();
+
+}
